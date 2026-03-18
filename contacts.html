@@ -20,8 +20,82 @@
 </header>
 
 <main>
+<form action="#" method="post">
+    <section>
+        <h2>Форма зворотного зв'язку</h2>
+        
+        <br>
 
-    
+        <h2>Контактна інформація</h2>
+
+        <p>Електрона пошта</p>
+        <a href="mailto:email@example.com">mailemail@example.com</a>
+
+        <br>
+
+        <p>Номер телефону</p>
+        <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+    </section>
+
+    <fieldset>
+        <legend>Заповніть форму нижче, щоб зв'язатися зі мною.</legend>
+
+        <label for="name">Ім'я:</label><br>
+        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+    </fieldset>
+</form>
+
+    <br>
+
+    <fieldset>
+        <legend>Повідомлення</legend>
+
+        <label for="subject">Тема:</label><br>
+        <select id="subject" name="subject" required>
+            <option value="">-- Оберіть тему --</option>
+            <option value="general">Загальне питання</option>
+            <option value="cooperation">Співпраця</option>
+            <option value="suggestion">Пропозиція</option>
+            <option value="feedback">Відгук</option>
+        </select>
+
+        <p>Тип звернення:</p>
+
+        <label>
+            <input type="radio" name="type" value="question" required>
+            Питання
+        </label><br>
+
+        <label>
+            <input type="radio" name="type" value="suggestion">
+            Пропозиція
+        </label><br>
+
+        <label>
+            <input type="radio" name="type" value="complaint">
+            Скарга
+        </label><br><br>
+
+        <label for="message">Повідомлення:</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення"></textarea>
+
+    </fieldset>
+
+    <br>
+
+    <label>
+        <input type="checkbox" name="consent" required>
+        Я погоджуюсь на обробку персональних даних
+    </label>
+
+    <br><br>
+
+    <button type="submit">Надіслати</button>
+
+</form>
 
 </main>
 
