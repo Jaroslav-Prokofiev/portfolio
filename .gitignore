@@ -1,0 +1,30 @@
+# Logs
+*.log
+# Temporary files
+*.tmp
+*~
+*.temp
+
+*.bak
+# Environment files (containing secrets, API keys, credentials)
+.env
+*.env
+.env.*
+
+# Local configuration that shouldn't be shared
+*.local
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+
+# cache
+.cache/
+
+# Archive
+*.zip
+*.rar
