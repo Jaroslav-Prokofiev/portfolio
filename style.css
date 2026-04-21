@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: rgb(255, 255, 255); 
+    color: hsl(0, 0%, 0%);
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    
+    background-color: rgb(255, 255, 255);
+    padding: 0.1rem 3rem;
+    border-bottom: 1px solid #eaeaea;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem; 
+}
+
+nav > ul > li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0; 
+    display: inline-block;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:link {
+    color: hsl(0, 0%, 0%);
+}
+
+nav ul li a:visited {
+    color: #333333;
+}
+
+nav ul li a:hover {
+    color: #A53DFF;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #A53DFF;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    background-color: #A53DFF;
+    border-color: #A53DFF;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+
+}
+
+nav ul li a.active::after {
+    display: none;
+}
+
+nav ul li a.active:hover::after {
+    display: none;
+}
+
+nav ul li a:focus {
+    outline: 2px solid #A53DFF;
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
