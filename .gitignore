@@ -28,3 +28,6 @@ node_modules/
 # Archive
 *.zip
 *.rar
+
+# desktop.ini
+desktop.ini
