@@ -85,7 +85,7 @@ nav ul li a:link {
 }
 
 nav ul li a:visited {
-    color: #333333;
+    color: hsl(0, 0%, 0%);
 }
 
 nav ul li a:hover {
@@ -287,7 +287,7 @@ ol {
 ol li {
     margin-bottom: 0.5rem;
     line-height: 1.5;
-    color: #333333;
+    color: hsl(0, 0%, 0%);
 }
 
 section p strong a:hover,
@@ -324,7 +324,7 @@ aside video {
     max-width: 640px;
     border-radius: 16px;
     margin-top: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px hsl(0, 0%, 0%);
 }
 
 aside figure {
@@ -425,7 +425,140 @@ dd {
 }
 
 /* ===== Форма ===== */
+form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+}
 
+form section {
+    background: linear-gradient(135deg, #b15ff9 0%, #7a2bc4 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+form section h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 0rem;
+}
+
+form section h3{
+    color: rgb(255, 255, 255);
+}
+
+form section p {
+    color: hsl(0, 0%, 0%);
+    font-size: 1.2rem;
+}
+
+form section a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;    
+    font-weight: 500;
+}
+
+form section a:hover {
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+form section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    font-size: 0.9rem;
+}
+
+label .required {
+    color: #A53DFF;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0d0ff;
+    border-radius: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #f8f9fa;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #A53DFF;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 0 3px rgba(165, 61, 255, 0.1);
+}
+
+input[type="radio"]{
+    width: auto !important;
+    height: auto !important;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #A53DFF;
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    .checkbox-wrapper input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-wrapper span {
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #A53DFF;
+}
 
 /* ===== Футер ===== */
 footer {
