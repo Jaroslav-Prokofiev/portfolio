@@ -61,7 +61,67 @@ function exercise1() {
 
 // Завдання №2
 function exercise2() {
+// Оцінювання студентів
+function getGrade(score) {
+        if (score >= 90) return "відмінно";
+        else if (score >= 75) return "добре";
+        else if (score >= 60) return "задовільно";
+        else if (score >= 0) return "незадовільно";
+        else return "невалідний бал";
+}   
 
+function showStudentData(name, score) {
+    const grade = getGrade(score);
+    return "Ім'я: " + name + ", " + grade;
+}
+
+console.log("Оцінювання студентів");
+console.log(showStudentData("Аліса", 97));
+console.log(showStudentData("Максим", 50));
+console.log(showStudentData("Кіра", 61  ));
+console.log(showStudentData("Ольга", 84));
+
+//Назва пори роĸу уĸраїнсьĸою
+function getSeasonUA(month) {
+    switch (month) {
+        case 12:
+        case 1:
+        case 2:
+            return "Зима";
+        case 3:
+        case 4:
+        case 5:
+            return "Весна";
+        case 6:
+        case 7:
+        case 8:
+            return "Літо";
+        case 9:
+        case 10:
+        case 11:
+            return "Осінь";
+        default:
+            return "Невалідний номер місяця";
+    }
+}
+
+console.log("Назва пори роĸу уĸраїнсьĸою");
+console.log(`Місяць 1 - ${getSeasonUA(1)}`);
+console.log(`Місяць 3 - ${getSeasonUA(3)}`);
+console.log(`Місяць 6 - ${getSeasonUA(6)}`);
+console.log(`Місяць 9 - ${getSeasonUA(9)}`);
+console.log(`Місяць 13 - ${getSeasonUA(13)}`);
+
+// Умовна перевірка за допомогою тернарного оператора
+console.log("Умовна перевірка за допомогою тернарного оператора");
+const detail1 = 3;
+console.log(`Ремінь ГРМ - ${detail1 > 0 ? "В наявності" : "Немає в наявності"}`);
+
+const detail2 = 0;
+console.log(`Свічки запалювання - ${detail2 > 0 ? "В наявності" : "Немає в наявності"}`);
+
+const detail3 = 2;
+console.log(`Важіль верхній лівий - ${detail3 > 0 ? "В наявності" : "Немає в наявності"}`);
 }
 
 
