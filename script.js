@@ -8,7 +8,7 @@ function exercise1() {
     const null_1 = null;
     let undefined_1 = undefined; 
     const symbol_1 = Symbol("id");
-    const bigint_1 = 900719921313213132254740991n;
+    const bigint_1 = 90071992131321740991n;
     
     console.log(`string_1: ${string_1}, ${typeof string_1}`);
     console.log(`number_1: ${number_1}, ${typeof number_1}`);
@@ -61,67 +61,67 @@ function exercise1() {
 
 // Завдання №2
 function exercise2() {
-// Оцінювання студентів
-function getGrade(score) {
+    // Оцінювання студентів
+    function getGrade(score) {
         if (score >= 90) return "відмінно";
         else if (score >= 75) return "добре";
         else if (score >= 60) return "задовільно";
         else if (score >= 0) return "незадовільно";
         else "невалідний бал";
-}   
+    }   
 
-function showStudentData(name, score) {
-    const grade = getGrade(score);
-    return "Ім'я: " + name + ", " + grade;
-}
+    function showStudentData(name, score) {
+        const grade = getGrade(score);
+        return "Ім'я: " + name + ", " + grade;
+    }
 
-console.log("Оцінювання студентів");
-console.log(showStudentData("Аліса", 97));
-console.log(showStudentData("Максим", 50));
-console.log(showStudentData("Кіра", 61  ));
-console.log(showStudentData("Ольга", 84));
+    console.log("Оцінювання студентів");
+    console.log(showStudentData("Аліса", 97));
+    console.log(showStudentData("Максим", 50));
+    console.log(showStudentData("Кіра", 61  ));
+    console.log(showStudentData("Ольга", 84));
 
 //Назва пори роĸу уĸраїнсьĸою
-function getSeasonUA(month) {
-    switch (month) {
-        case 12:
-        case 1:
-        case 2:
-            return "Зима";
-        case 3:
-        case 4:
-        case 5:
-            return "Весна";
-        case 6:
-        case 7:
-        case 8:
-            return "Літо";
-        case 9:
-        case 10:
-        case 11:
-            return "Осінь";
-        default:
-            return "Невалідний номер місяця";
+    function getSeasonUA(month) {
+        switch (month) {
+            case 12:
+            case 1:
+            case 2:
+                return "Зима";
+            case 3:
+            case 4:
+            case 5:
+                return "Весна";
+            case 6:
+            case 7:
+            case 8:
+                return "Літо";
+            case 9:
+            case 10:
+            case 11:
+                return "Осінь";
+            default:
+                return "Невалідний номер місяця";
+        }
     }
-}
 
-console.log("Назва пори роĸу уĸраїнсьĸою");
-console.log(`Місяць 1 - ${getSeasonUA(1)}`);
-console.log(`Місяць 3 - ${getSeasonUA(3)}`);
-console.log(`Місяць 6 - ${getSeasonUA(6)}`);
-console.log(`Місяць 9 - ${getSeasonUA(9)}`);
-console.log(`Місяць 13 - ${getSeasonUA(13)}`);
+    console.log("Назва пори роĸу уĸраїнсьĸою");
+    console.log(`Місяць 1 - ${getSeasonUA(1)}`);
+    console.log(`Місяць 3 - ${getSeasonUA(3)}`);
+    console.log(`Місяць 6 - ${getSeasonUA(6)}`);
+    console.log(`Місяць 9 - ${getSeasonUA(9)}`);
+    console.log(`Місяць 13 - ${getSeasonUA(13)}`);
 
-// Умовна перевірка за допомогою тернарного оператора
-console.log("Умовна перевірка за допомогою тернарного оператора");
-const detail1 = 3;
-console.log(`Ремінь ГРМ - ${detail1 > 0 ? "В наявності" : "Немає в наявності"}`);
+    // Умовна перевірка за допомогою тернарного оператора
+    console.log("Умовна перевірка за допомогою тернарного оператора");
+    const detail1 = 3;
+    console.log(`Ремінь ГРМ - ${detail1 > 0 ? "В наявності" : "Немає в наявності"}`);
 
-const detail2 = 0;
-console.log(`Свічки запалювання - ${detail2 > 0 ? "В наявності" : "Немає в наявності"}`);
+    const detail2 = 0;
+    console.log(`Свічки запалювання - ${detail2 > 0 ? "В наявності" : "Немає в наявності"}`);
 
-const detail3 = 2;
-console.log(`Важіль верхній лівий - ${detail3 > 0 ? "В наявності" : "Немає в наявності"}`);
+    const detail3 = 2;
+    console.log(`Важіль верхній лівий - ${detail3 > 0 ? "В наявності" : "Немає в наявності"}`);
 }
 
 // Завдання №3
@@ -170,11 +170,11 @@ function exercise3() {
 
     let removePop = students.pop();
     console.log("Масив після pop", students);
-    console.log("Видалений студент:", removePop);
+    console.log("Видалений студент", removePop);
 
     let removeSplice = students.splice(3, 1);
     console.log("Масив після splice (видалення)", students);
-    console.log("Видалений студент:", removeSplice[0]);
+    console.log("Видалений студент", removeSplice[0]);
 
     let addSplice = students.splice(4, 0, {
             name: "Петренко Андрій",
@@ -233,7 +233,7 @@ function exercise4() {
             return value;
         }
     };
-}
+}   
 
     const counter = createCounter();
     console.log(counter.increment()); 
@@ -282,7 +282,7 @@ function exercise4() {
     categories: ["Гальмівна система", "Безпека"]
 };
 
-printPartInfo(part);
+    printPartInfo(part);
 }
 
 // Завдання №5
