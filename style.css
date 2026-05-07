@@ -1,0 +1,335 @@
+/* ===== Глобальні-начальні стилі ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Тіло ===== */
+body {
+    background-color: #d5d6d8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    padding: 20px;
+}
+
+/* ===== Основа ===== */
+.app-container {
+    max-width: 750px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* ===== Хедер ===== */
+.user-header {
+    background-color: #1e293b;
+    color: rgb(255, 255, 255);
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.user-details h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.user-details p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.task-stats {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.task-stats span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.main-content {
+    padding: 28px;
+}
+
+/* ===== Секція додавання таска ===== */
+.add-task-section h3 {
+    color: #1e293b;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#task-form {
+    margin-bottom: 28px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid #ebe3e3;
+    border-radius: 14px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+}
+
+#task-input:focus {
+    border-color: #1e293b;
+}
+
+#add-button {
+    background: linear-gradient(135deg, #1e293b 0%, #3d3a44 100%);
+    color: white;
+    border: none;
+    padding: 0 28px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#add-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== Пошук ===== */
+.search-filter-section {
+    margin-bottom: 28px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 0px 12px 18px;
+    border: 2px solid #ebe3e3;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    outline: none;
+    font-family: inherit;
+}
+
+#search-input:focus {
+    border-color: #1e293b;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #c7cacc;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    color: #475569;
+}
+
+.filter-btn:hover {
+    background: #e2e8f0;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #1e293b 0%, #3d3a44 100%);
+    color: white;
+}
+
+/* ===== Спінер ===== */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 12px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #6781f5;
+    border-radius: 50%;
+    animation: spin 0.8s linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader span {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Помилка ===== */
+.error-message {
+    background: #fee2e2;
+    color: #000000;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border-left: 5px solid #ec0b0b;
+}
+
+/* ===== Лист задач ===== */
+.task-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.task-item {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.task-item:hover {
+    background: #f1f5f9;
+    transform: translateX(6px);
+    border-color: #cbd5e1;
+}
+
+/* Виконане завдання */
+.task-item.completed {
+    background: #f1f5f9;
+    opacity: 0.75;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* Чекбокс */
+.task-checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #6781f5;
+}
+
+/* Текст завдання */
+.task-title {
+    flex: 1;
+    font-size: 1rem;
+    color: #1e293b;
+    word-break: break-word;
+}
+
+/* Кнопка видалення */
+.task-delete {
+    background: #fee2e2;
+    border: none;
+    color: #ec0b0b;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.task-delete:hover {
+    background: #dc2626;
+    color: white;
+    transform: scale(1.05);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #000000;
+}
+
+.empty-icon {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.empty-state small {
+    font-size: 0.85rem;
+}

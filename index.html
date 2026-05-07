@@ -1,12 +1,74 @@
-  <!DOCTYPE html>
-    <html lang="uk">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Головна сторінка - Лабораторна робота №4</title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5 - Todo list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+      <!-- Хедер -->
+        <div class="user-header">
+            <div class="user-info">
+                <div class="user-avatar"></div>
+                <div class="user-details">
+                    <h2 id="user-name"></h2>
+                    <p id="user-email"></p>
+                </div>
+            </div>
+            <div class="task-stats">
+                <span id="active-count">0</span> активних завдань
+            </div>
+        </div>
+
+        <!-- Основний контент -->
+        <div class="main-content">
+            <!-- Форма нового завдання -->
+            <div class="add-task-section">
+                <h3>Створити завдання</h3>
+                <form id="task-form">
+                    <div class="input-group">
+                        <input type="text" id="task-input" placeholder="Наступне завдання..." autocomplete="off">
+                        <button type="submit" id="add-button" disabled>Додати завдання</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Пошук та фільтр -->
+            <div class="search-filter-section">
+                <div class="search-box">
+                    <input type="text" id="search-input"  placeholder="Пошук завдання..."  autocomplete="off">
+                </div>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Усі</button>
+                    <button class="filter-btn" data-filter="active">Активні</button>
+                    <button class="filter-btn" data-filter="completed">Виконані</button>
+                </div>
+            </div>
+
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <span>Завантаження</span>
+            </div>
+
+            <!-- error -->
+            <div id="error-message" class="error-message hidden"></div>
+
+            <!-- Список завдань -->
+            <ul id="task-list" class="task-list">
+            </ul>
+
+            <!-- Порожній стан -->
+            <div id="empty-state" class="empty-state hidden">
+                <p>Немає завдань</p>
+                <small>Додайте нове завдання</small>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    </body>
-    </html>
+</body>
+</html>
