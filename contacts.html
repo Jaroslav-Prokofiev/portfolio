@@ -8,101 +8,118 @@
 </head>
 <body>
 
-<header>
-    <div class="header_info">
-        <h1>Прокоф`єв Ярослав Сергійович</h1>
-        <h2>Junior Frontend Developer</h2>
-    </div>
+<div class="page">
+    <header class="header-area">
+        <div class="header_info">
+            <h1>Прокоф`єв Ярослав Сергійович</h1>
+            <h2>Junior Frontend Developer</h2>
+        </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="aboutme.html">Про мене</a></li>
-            <li><a href="contacts.html" class="active">Контакти</a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="hamburger-wrapper">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-<main>
-<form action="#" method="post">
-    <section>
-        <h2>Форма зворотного зв'язку</h2>
-        
-        <br>
+            <ul class="nav-list">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="aboutme.html">Про мене</a></li>
+                <li><a href="contacts.html" class="active">Контакти</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <h3>Контактна інформація</h3>
+    <main class="content">
+        <form action="#" method="post">
+            <section>
+                <h2>Форма зворотного зв'язку</h2>
+                <br>
+                <h3>Контактна інформація</h3>
+                <p>Електрона пошта</p>
+                <a href="mailto:email@example.com">mailemail@example.com</a>
+                <br>
+                <p>Номер телефону</p>
+                <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+            </section>
 
-        <p>Електрона пошта</p>
-        <a href="mailto:email@example.com">mailemail@example.com</a>
+            <fieldset>
+                <legend>Контактні дані</legend>
+                <p>Заповніть форму нижче, щоб зв'язатися зі мною.</p>
 
-        <br>
+                <label for="name">Ім'я:</label><br>
+                <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required><br><br>
 
-        <p>Номер телефону</p>
-        <a href="tel:+380000000000">+38 (000) 000-00-00</a>
-    </section>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+            </fieldset>
 
-    <fieldset>
-        <legend>Контактні дані</legend>
-        <p>Заповніть форму нижче, щоб зв'язатися зі мною.</p>
+            <br>
 
-        <label for="name">Ім'я:</label><br>
-        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required><br><br>
+            <fieldset>
+                <legend>Повідомлення</legend>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="email@example.com" required>
-    </fieldset>
+                <label for="subject">Тема:</label><br>
+                <select id="subject" name="subject" required>
+                    <option value="">-- Оберіть тему --</option>
+                    <option value="general">Загальне питання</option>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="suggestion">Пропозиція</option>
+                    <option value="feedback">Відгук</option>
+                </select>
 
-    <br>
+                <p>Тип звернення:</p>
 
-    <fieldset>
-        <legend>Повідомлення</legend>
+                <label>
+                    <input type="radio" name="type" value="question" required>
+                    Питання
+                </label><br>
 
-        <label for="subject">Тема:</label><br>
-        <select id="subject" name="subject" required>
-            <option value="">-- Оберіть тему --</option>
-            <option value="general">Загальне питання</option>
-            <option value="cooperation">Співпраця</option>
-            <option value="suggestion">Пропозиція</option>
-            <option value="feedback">Відгук</option>
-        </select>
+                <label>
+                    <input type="radio" name="type" value="suggestion">
+                    Пропозиція
+                </label><br>
 
-        <p>Тип звернення:</p>
+                <label>
+                    <input type="radio" name="type" value="complaint">
+                    Скарга
+                </label><br><br>
 
-        <label>
-            <input type="radio" name="type" value="question" required>
-            Питання
-        </label><br>
+                <label for="message">Повідомлення:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
 
-        <label>
-            <input type="radio" name="type" value="suggestion">
-            Пропозиція
-        </label><br>
+            </fieldset>
 
-        <label>
-            <input type="radio" name="type" value="complaint">
-            Скарга
-        </label><br><br>
+            <br>
 
-        <label for="message">Повідомлення:</label><br>
-        <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+            <label class="checkbox-wrapper">
+                <input type="checkbox" name="consent" required>
+                Я погоджуюсь на обробку персональних даних
+            </label>
 
-    </fieldset>
+            <br><br>
 
-    <br>
+            <button type="submit">Надіслати</button>
+        </form>
+    </main>
 
-    <label class="checkbox-wrapper">
-        <input type="checkbox" name="consent" required>
-        Я погоджуюсь на обробку персональних даних
-    </label>
+    <aside class="sidebar">
+        <h3>Цікаві факти про мене</h3>
+        <p>Почав програмувати на курсах програмування в Запоріжжі. Я вивчаю латинь та історію. Полюбляю читати книги.</p>
+        <figure>
+            <video controls width="640">
+                <source src="video/Music_video.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео.
+            </video>
+            <figcaption>Моя улюблена пісня</figcaption>
+        </figure>
+    </aside>
 
-    <br><br>
+    <footer class="footer-area">
+        <p>&copy; 2026 Ярослав Прокоф`єв.</p>
+    </footer>
+</div>
 
-    <button type="submit">Надіслати</button>
-
-</form>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Ярослав Прокоф`єв.</p>
-</footer>
+</body>
+</html>
